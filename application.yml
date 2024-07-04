@@ -1,6 +1,6 @@
 aes:
   encryption:
     # 16 bytes IV
-    initVector: RandomInitVector
+    initVector: RandomInitVector_suraj
     # 128 bit key
     key:  Bar12345Bar12345
