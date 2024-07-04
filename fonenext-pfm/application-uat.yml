@@ -15,8 +15,8 @@ cbs-middleware:
     secret: secret
   date.format : yyyy-MM-dd
 
-logging:
-  config: logback-spring.xml
+# logging:
+#   config: logback-spring.xml
 
 customer-api:
     url: https://uat-fonenext-customer.f1soft.com.np/api
