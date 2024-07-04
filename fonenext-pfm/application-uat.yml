@@ -1,11 +1,11 @@
 spring:
   zipkin:
     baseUrl: http://uat-zipkin.fonenext-uat.10.13.194.202.nip.io/zipkin/
-  kafka:
-    producer:
-      bootstrap-servers: service-kafka:9092
-    consumer:
-      bootstrap-servers: service-kafka:9092
+  # kafka:
+  #   producer:
+  #     bootstrap-servers: service-kafka:9092
+  #   consumer:
+  #     bootstrap-servers: service-kafka:9092
 cbs-middleware:
   baseUrl : http://dev-cbs-middleware.fonenext-dev.10.13.194.202.nip.io
   admin.username : Admin
