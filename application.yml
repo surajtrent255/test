@@ -1,6 +1,39 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+origin:
+  pfm: "*"
+
+server:
+  servlet:
+    context-path: /api
+    
+webclient:
+  http:
+    max:
+      connections: 10
+    client:
+      connect-timeout-millis: 5000
+      response-timeout-millis: 5000
+      read-timeout-millis: 5000
+      write-timeout-millis: 5000
+    metrics:
+      enable: true
+
 aes:
   encryption:
     # 16 bytes IV
     initVector: RandomInitVector_suraj
     # 128 bit key
     key:  Bar12345Bar12345
+    # 
+command:
+  line:
+    runner:
+      enabled: false
+logging:
+  pattern:
+    # Logging pattern containing traceId and spanId; no longer provided through Sleuth by default
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
