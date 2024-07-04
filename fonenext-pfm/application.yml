@@ -45,7 +45,7 @@ webclient:
 aes:
   encryption:
     # 16 bytes IV
-    initVector: RandomInitVector_suraj
+    initVector: RandomInitVector
     # 128 bit key
     key:  Bar12345Bar12345
     # 
