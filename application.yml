@@ -2,7 +2,19 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
-
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+  datasource:
+    databaseDriverName: com.mysql.cj.jdbc.Driver
+    maxPool: 25
+    maxIdle: 10
+    minIdle: 5
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      # max-request-size: 50MB
+      
 origin:
   pfm: "*"
 
