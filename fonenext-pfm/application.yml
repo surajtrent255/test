@@ -1,5 +1,5 @@
-app:
-  name: fonenext-pfm
+# app:
+#   name: fonenext-pfm
 spring:
   mvc:
     pathmatch:
