@@ -6,7 +6,7 @@ spring:
   #     bootstrap-servers: service-kafka:9092
   #   consumer:
   #     bootstrap-servers: service-kafka:9092
-    kafka:
+  kafka:
     producer:
       bootstrap-servers: http://localhost:9092
     consumer:
