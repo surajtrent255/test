@@ -1,68 +1,6 @@
-spring:
-  application:
-    name: fonenext-pfm
-  profiles:
-    active: local
-  mvc:
-    pathmatch:
-      matching-strategy: ant_path_matcher
-  jackson:
-    serialization:
-      WRITE_DATES_AS_TIMESTAMPS: false
-  datasource:
-    databaseDriverName: com.mysql.cj.jdbc.Driver
-    maxPool: 25
-    maxIdle: 10
-    minIdle: 5
-  servlet:
-    multipart:
-      max-file-size: 50MB
-      max-request-size: 50MB
-
-origin:
-  pfm: "*"
-
-server:
-  servlet:
-    context-path: /api
-
-management:
-  endpoints:
-    web:
-      base-path: /actuator
-      exposure:
-        include: [ "health","prometheus", "metrics" ]
-  endpoint:
-    health:
-      show-details: always
-    metrics:
-      enabled: true
-    prometheus:
-      enabled: true
-
-webclient:
-  http:
-    max:
-      connections: 10
-    client:
-      connect-timeout-millis: 5000
-      response-timeout-millis: 5000
-      read-timeout-millis: 5000
-      write-timeout-millis: 5000
-    metrics:
-      enable: true
 aes:
   encryption:
     # 16 bytes IV
     initVector: RandomInitVector
     # 128 bit key
     key:  Bar12345Bar12345
-
-command:
-  line:
-    runner:
-      enabled: false
-logging:
-  pattern:
-    # Logging pattern containing traceId and spanId; no longer provided through Sleuth by default
-    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
