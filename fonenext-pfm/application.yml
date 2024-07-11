@@ -14,7 +14,10 @@ spring:
     multipart:
       max-file-size: 50MB
       # max-request-size: 50MB
-      
+  stream:
+    kafka:
+      binder:
+        brokers: cty-kafka-1.f1soft.com:9093, cty-kafka-2.f1soft.com:9093, cty-kafka-3.f1soft.com:9093      
 origin:
   pfm: "*"
 
