@@ -4,7 +4,7 @@ spring:
       matching-strategy: ant_path_matcher
   jackson:
     serialization:
-      WRITE_DATES_AS_TIMESTAMPS: true
+      WRITE_DATES_AS_TIMESTAMPS: false
   datasource:
     databaseDriverName: com.mysql.cj.jdbc.Driver
     maxPool: 25
@@ -14,10 +14,9 @@ spring:
     multipart:
       max-file-size: 50MB
       # max-request-size: 50MB
-  stream:
-    kafka:
-      binder:
-        brokers: cty-kafka-1.f1soft.com:9093, cty-kafka-2.f1soft.com:9093, cty-kafka-3.f1soft.com:9093      
+  main:
+    allow-bean-definition-overriding: true
+      
 origin:
   pfm: "*"
 
