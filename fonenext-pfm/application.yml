@@ -18,7 +18,7 @@ spring:
     allow-bean-definition-overriding: true
       
 origin:
-  pfm: "**"
+  pfm: "*"
 
 server:
   servlet:
