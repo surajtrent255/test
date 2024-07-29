@@ -55,7 +55,7 @@ command:
   line:
     runner:
       enabled: false
-logging:
-  config: classpath:logback-spring.xml
-  pattern:
-    level: "%5p [${HOSTNAME},%X{traceId:-},%X{spanId:-}]"
+# logging:
+#   config: classpath:logback-spring.xml
+#   pattern:
+#     level: "%5p [${HOSTNAME},%X{traceId:-},%X{spanId:-}]"
