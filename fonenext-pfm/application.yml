@@ -58,5 +58,4 @@ command:
 logging:
   config: classpath:logback-spring.xml
   pattern:
-    # Logging pattern containing traceId and spanId; no longer provided through Sleuth by default
-    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+    level: "%5p [${HOSTNAME},%X{traceId:-},%X{spanId:-}]"
